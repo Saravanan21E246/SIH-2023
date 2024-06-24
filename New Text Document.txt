@@ -1,0 +1,2580 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="Smart Street Light-logos.jpeg">
+  <title>
+    street light
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="../assets/css/soft-ui-dashboard.css?v=1.0.7" rel="stylesheet" />
+  <!-- Nepcha Analytics (nepcha.com) -->
+  <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script defer type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script defer nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+  </style>
+    <style>
+      /* Customize the switch colors */
+      .form-check-input:checked {
+        background-color: #18C1E8 !important; /* Change to your desired color */
+       
+      }
+  
+      .form-check-input:unchecked {
+        background-color: white !important; /* Change to your desired color */
+      }
+    
+    </style>
+       <style>
+        @media (min-width: 1200px) {
+          .custom-col-xl-2-5 {
+            width: 20%; /* 2.5 out of 12 columns */
+          }
+        }
+        @media (min-width: 1200px) {
+          .custom-col-xl-2-4 {
+            width: 25%; /* 2.5 out of 12 columns */
+          }
+        }
+      </style>
+  <style>
+    /* Custom CSS for centered modal and spark animation */
+    .modal-dialog {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  </style>
+  <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+</head>
+
+<body class="g-sidenav-show  bg-gray-100">
+  <aside class="sidenav bg-gradient-dark navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+    <div class="sidenav-header">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html " target="_blank">
+        <div class="row">
+            <div class="col-3" style="padding-right:2px ;">
+              <img src="KCE.png" class="navbar-brand-img h-100" alt="main_logo">
+            
+            </div>
+            <div class="col-9" style="padding-top: 8px;padding-left: 0;">
+              <span class="ms-1 font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">WATT WARRIORS</span>
+            </div>
+        </div>
+      </a>
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link  active" href="../pages/dashboard.php">
+            <div class=" icon-shape icon-sm shadow border-radius-md bg-info text-center me-2 d-flex align-items-center justify-content-center">
+              <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <title>shop </title>
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g transform="translate(-1716.000000, -439.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                    <g transform="translate(1716.000000, 291.000000)">
+                      <g transform="translate(0.000000, 148.000000)">
+                        <path class="color-background opacity-6" d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z"></path>
+                        <path class="color-background" d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="Live_Data.php">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-record-btn" viewBox="0 0 16 16">
+                <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1" style="color: white;">Live Data</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="http://121.200.48.28:9022/doc/page/preview.asp" target="_blank">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
+                <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
+                <path d="M9 6h.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 7.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 16H2a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm6 8.73V7.27l-3.5 1.555v4.35l3.5 1.556zM1 8v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1"/>
+                <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6M7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1" style="color: white;">Live Cam</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="Position.php">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="angle.svg" alt="" style="height: 12px;width: 12px;">
+            </div>
+            <span class="nav-link-text ms-1" style="color: white;">Post Position</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="https://mdash.net/login" target="_blank">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1" style="color: white;">OTA Update</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " target="_blank" href="https://public.tableau.com/app/profile/vishnuvaradhan.v/viz/AutomatedPublicLighting/AutomatedPublicLighting">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1" style="color: white;">Analysis</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link  " href="map.php">
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-geo-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+              </svg>
+            </div>
+            <span class="nav-link-text ms-1" style="color: white;">Map</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" >
+            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+              </svg>
+            </div>           
+              <form method="post" action="logout.php" >  
+                <input type="submit"  value="Logout" style="border: none;background-color: transparent;color: white;" />  
+             </form>        
+          </a>
+        </li>
+      </ul>
+    </div> 
+  </aside>
+
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar  navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" navbar-scroll="true">
+      <div class="container-fluid py-1 px-0">   
+        <nav aria-label="breadcrumb">
+          <img src="SIH2023-logo.png" alt="" style="height: 35px;">
+        </nav> 
+        
+        <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+      
+          </div>
+          <ul class="navbar-nav  justify-content-end">
+            
+            <li class="nav-item ">
+              <button id="manualButton" class="btn  btn-primary bg-gradient-dark  btn-sm mb-0 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="manual">
+                <div class="row">
+                  <div class="col"><h6 style="color: white;">manual</h6></div>
+                  <div class="col" style="padding-top: 4px;">
+                    <svg  id="manualIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                      <circle cx="8" cy="8" r="8"/>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li class="nav-item ">
+              <button id="automaticButton" class="btn  btn-primary bg-gradient-dark  btn-sm mb-0 me-3"data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="automatic">
+                <div class="row">
+                  <div class="col"><h6 style="color: white;">automatic</h6></div>
+                  <div class="col" style="padding-top: 4px;">
+                    <svg id="automaticIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                      <circle cx="8" cy="8" r="8"/>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </li>
+            <li class="nav-item ">
+              <button id="IntelligentButton" class="btn  btn-primary bg-gradient-dark  btn-sm mb-0 me-3" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Intelligent">
+                <div class="row">
+                  <div class="col"><h6 style="color: white;">Intelligent</h6></div>
+                  <div class="col" style="padding-top: 4px;">
+                    <svg id="aicon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                      <circle cx="8" cy="8" r="8"/>
+                    </svg>
+                  </div>
+                </div>
+              </button>
+            </li>
+     
+            <li class="nav-item d-flex align-items-center">
+              
+              <a class="btn btn-outline-dark bg-gradient-dark btn-sm mb-0 me-3"  href="#">
+                <div id="clock"></div>
+                <script>
+                  function startTime() {
+                  var today = new Date();
+                  var hr = today.getHours();
+                  var min = today.getMinutes();
+                  var sec = today.getSeconds();
+                  ap = (hr < 12) ? "<span>AM</span>" : "<span>PM</span>";
+                  hr = (hr == 0) ? 12 : hr;
+                  hr = (hr > 12) ? hr - 12 : hr;
+                  //Add a zero in front of numbers<10
+                  hr = checkTime(hr);
+                  min = checkTime(min);
+                  sec = checkTime(sec);
+                  document.getElementById("clock").innerHTML = hr + ":" + min + ":" + sec + " " + ap;
+                  var time = setTimeout(function(){ startTime() }, 500);
+                  }
+                  function checkTime(i) {
+                  if (i < 10) {
+                    i = "0" + i;
+                  }
+                  return i;
+                  }
+                  startTime();
+                  </script>
+                  <div id="date"></div>
+                  <script>  
+                    var date=new Date();  
+                    var day=date.getDate();  
+                    var month=date.getMonth()+1;  
+                    var year=date.getFullYear();  
+                    document.write(day+"."+month+"."+year);  
+                    </script> 
+              </a>
+              
+            </li>
+ <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row">
+        <div class="col-sm-6 mb-4 custom-col-xl-2-5">
+          <div class="card bg-gradient-dark" >
+            <div class="card-body p-3">              
+              <div class="row">
+                <div class="col-5">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp 1</p>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input"  type="checkbox" role="switch" id="flexSwitchCheckChecked1">
+                    </div>                   
+                    
+                  </div>
+                </div>
+                <div class="col-3 ">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <h6 id="Voltage1" style="padding-top: 10px;color: white;">0 V</h6>
+                  </div>
+                </div>
+                
+                <div class="col-2 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon1" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm mb-1  text-capitalize font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Intensity</p>
+                    <div class="progress" style="height: 9px;">
+                      <div class="progress-bar bg-info" id="progressbar1" role="progressbar" style="width: 55%; height: 12px;color: black;font-weight: 700;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>                                        
+                    </div>
+            </div>
+          </div>
+        </div>    
+        <div class="col-sm-6 mb-4 custom-col-xl-2-5">
+          <div class="card bg-gradient-dark">
+            <div class="card-body p-3" >
+              <div class="row">
+                <div class="col-5">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp 2</p>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked2" >
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-3 ">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <h6 id="Voltage2" style="padding-top: 10px;color: white;">0 V</h6>
+                  </div>
+                </div>
+                <div class="col-2 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon2" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm mb-1 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Intensity</p>
+                    <div class="progress" style="height: 9px;">
+                      <div class="progress-bar bg-info" id="progressbar2" role="progressbar" style="width: 55%; height: 12px;color: black;font-weight: 700;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 mb-4 custom-col-xl-2-5">
+          <div class="card bg-gradient-dark">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-5">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp 3</p>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked3" >
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-3 ">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <h6 id="Voltage3" style="padding-top: 10px;color: white;">0 V</h6>
+                  </div>
+                </div>
+                <div class="col-2 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon3" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm mb-1 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Intensity</p>
+                    <div class="progress" style="height: 9px;">
+                      <div class="progress-bar bg-info" id="progressbar3" role="progressbar" style="width: 55%; height: 12px;color: black;font-weight: 700;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 mb-4 custom-col-xl-2-5">
+          <div class="card bg-gradient-dark">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-5">
+                  <div class="numbers">
+                    <p class="text-sm mb-0 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp 4</p>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked4" >
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col-3 ">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <h6 id="Voltage4" style="padding-top: 10px;color: white;">0 V</h6>
+                  </div>
+                </div>
+                <div class="col-3 text-end">
+                  <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                    <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon4" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-sm mb-1 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Intensity</p>
+                    <div class="progress" style="height: 9px;">
+                      <div class="progress-bar bg-info" id="progressbar4" role="progressbar" style="width: 55%; height: 12px;color: black;font-weight: 700;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 mb-4 custom-col-xl-2-5">
+            <div class="card bg-gradient-dark">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-5">
+                    <div class="numbers">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp 5</p>
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked5" >
+                      </div>
+                      
+                    </div>
+                  </div>
+                  <div class="col-3 ">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <h6 id="Voltage5" style="padding-top: 10px;color: white;">0 V</h6>
+                    </div>
+                  </div>
+                  <div class="col-2 text-end">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon4" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-sm mb-1 text-capitalize font-weight-bold"style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Intensity</p>
+                      <div class="progress" style="height: 9px;">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 55%; height: 12px;color: black;font-weight: 700;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                      </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-lg-6 mb-lg-0 mb-4" >
+          <div class="card bg-gradient-dark" style="height: 405px;" >
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-lg-7">                
+                  <br>
+                  <!-- Columns -->
+                  <div class="row">
+                    <div class="col" >
+                      <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                       <span style="color: white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;">Lams</span>
+                      </div> 
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(255, 255, 255);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" > A</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(255, 255, 255);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" >W</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(255, 255, 255);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" >kWhr</span>                       
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- 1 -->
+                  <div class="row">
+                    <div class="col" >
+                      <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                       <span style="color: white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;"><i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon11" aria-hidden="true"></i>-1</span>
+                      </div> 
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Current1">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Power1">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Energy1">0</span>                       
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- 2 -->
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                        <span style="color: white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;"><i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon22" aria-hidden="true"></i>-2</span>                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Current2">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Power2">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Energy2">0</span>                       
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- 3 -->
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                        <span style="color: white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;"><i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon33" aria-hidden="true"></i>-3</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Current3">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Power3">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Energy3">0</span>                       
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- 4 -->
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                        <span style="color: white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;"><i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon44" aria-hidden="true"></i>-4</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Current4">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Power4" >0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Energy4">0</span>                       
+                       
+                      </div>
+                    </div>
+                  </div>
+                  <br>
+                  <!-- 5 -->
+                  <div class="row">
+                    <div class="col">
+                      <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                        <span style="color: white;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;"><i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon44" aria-hidden="true"></i>-5</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Current5">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Power5">0</span>                       
+                       
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card-body p-1 bg-info shadow text-center border-radius-md h-100"  >
+                        <span style="color: rgb(0, 0, 0);font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;font-weight: 900;" id="Energy5">0</span>                       
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                  <div class="bg-gradient- border-radius-lg h-100">
+                      <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                          <!-- Hide on mobile screens -->
+                          <img class="w-100 position-relative z-index-2 -4 d-none d-lg-block" src="../assets/img/illustrations/man-with-laptop-light.png" style="border-radius: 6px;" alt="rocket">
+                      </div>
+                  </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .................................................................... -->
+
+
+        <div class="col-lg-6 mb-lg-0 mb-4" >
+          <div class="card bg-gradient-dark" style="height: 405px;">
+            <div class="card-body p-3">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="row" >
+                    <form class="multi-range-field " >
+                      <h5 class="text-nowrap mb-2" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Intensity Control</h5>
+                      <div class="row" style="padding-top: 26px;">
+                        <div class="col-3"><small  style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp-1</small></div>                  
+                        <div class="col-5"><input type="range"  min="0" max="4" step="1" id="customRange1" value="0" style="width: 100%;"></div>
+                        <div class="col-2">
+                          <a href="whatsapp://send?abid=+916369214868&text=visit%20the%20zone%201%20and%20check%20https%3A%2F%2Fwww.google.com%2Fmaps%2Fplace%2F28%C2%B027'02.4%22N%2B77%C2%B017'01.2%22E%2F@28.4456672,77.2670253,14z%2Fdata%3D!4m4!3m3!8m2!3d28.4506574!4d77.2836711%3Fentry%3Dttu">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(14, 201, 67);" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                          </svg>
+                        </a>
+                        </div>
+                        <div class="col-2">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(239, 210, 210);" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg>
+                        </div>
+                      </div>              
+                    </form>
+                  </div><br>
+                  <div class="row" style="padding-top: 10px;">
+                    <form class="multi-range-field " >
+                      <div class="row">
+                        <div class="col-3"><small  style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp-2</small></div>                  
+                        <div class="col-5"><input type="range"  min="0" max="4" step="1" id="customRange2" value="0" style="width: 100%;"></div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(14, 201, 67);" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                          </svg>
+                        </div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg"style="color: rgb(239, 210, 210);"width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg>
+                        </div>
+                      </div>              
+                    </form>
+                  </div><br>
+                  <div class="row" style="padding-top: 10px;">
+                    <form class="multi-range-field " >
+                      <div class="row">
+                        <div class="col-3"><small  style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp-3</small></div>                  
+                        <div class="col-5"><input type="range"  min="0" max="4" step="1" id="customRange3" value="0" style="width: 100%;"></div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(14, 201, 67);" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                          </svg>
+                        </div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(239, 210, 210);" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg>
+                        </div>
+                        
+                      </div>              
+                    </form>
+                  </div><br>
+
+
+
+                  <div class="row" style="padding-top: 10px;">
+                    <form class="multi-range-field " >
+                      <div class="row">
+                        <div class="col-3"><small  style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp-4</small></div>                  
+                        <div class="col-5"><input type="range"  min="0" max="4" step="1" id="customRange4" value="0" style="width: 100%;"></div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(14, 201, 67);" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                          </svg>
+                        </div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(239, 210, 210);" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg>
+                        </div>
+                        
+                      </div>              
+                    </form>
+                  </div>
+                  <br>
+                  <div class="row" style="padding-top: 10px;">
+                    <form class="multi-range-field " >
+                      <div class="row">
+                        <div class="col-3"><small  style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lamp-5</small></div>                  
+                        <div class="col-5"><input type="range"  min="0" max="4" step="1" id="customRange5" value="0" style="width: 100%;"></div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(14, 201, 67);" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                          </svg>
+                        </div>
+                        <div class="col-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" style="color: rgb(239, 210, 210);" width="16" height="16" fill="currentColor" class="bi bi-info-square-fill" viewBox="0 0 16 16">
+                            <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.93 4.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                          </svg>
+                        </div>
+                      </div>              
+                    </form>
+                  </div>
+                  <br>          
+                </div>
+                <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                  <div class="bg-gradient- border-radius-lg h-100">
+                      <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                          <!-- Hide on mobile screens -->
+                          <img class="w-100 position-relative z-index-2 -4 d-none d-lg-block" src="../assets/img/illustrations/light.png" style="border-radius: 6px;" alt="rocket">
+                      </div>
+                  </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-6 mb-lg-0 mb-4">
+          <div class="card z-index-2 bg-gradient-dark" >
+            <div class="card-body p-3 ">
+              <div class="bg-gradient-dark border-radius-lg py-3 pe-1 mb-3">
+                <div class="chart ">
+                  <canvas id="chart-bars" class="chart-canvas" height="314"></canvas>
+                </div>
+              </div>
+              <h6 class="ms-2 mt-4 mb-0"  style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Env Intensity: <span id="Environmental_intensity" style="color: rgb(0, 255, 0);"> 0 </span><span style="color: rgb(219, 219, 41);"> lumen, </span> <span>L-1: </span><span id="lamplux1" style="color: rgb(0, 255, 0);" >0</span> , <span>L-2: </span><span id="lamplux2" style="color: rgb(0, 255, 0);" >0</span> , <span>L-3: </span><span id="lamplux3" style="color: rgb(0, 255, 0);" >0</span></h6>        
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 ">
+          <div class="card z-index-2 bg-gradient-dark">
+            <div class="card-header pb-0 bg-gradient-dark">
+              <h6  style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Voltage, Current, Power</h6>
+              <p class="text-sm">
+                <span class="font-weight-bold">&nbsp;</span>
+              </p>
+            </div>
+            <div class="card-body p-3">
+              <div class="chart">
+                <canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
+          <div class="card bg-gradient-dark">
+            <div class="card-header pb-0 bg-gradient-dark">
+              <div class="row">
+                <div class="col-lg-6 col-7">
+                  <h6 style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Performance</h6>
+                  <p class="text-sm mb-0">
+                    
+                    <span class="font-weight-bold ms-1" style="color: #1BC0E7;font-family: Georgia, 'Times New Roman', Times, serif;">10:09:2023 / 11:00 AM</span>
+                  </p>
+                </div>
+                
+              </div>
+            </div>
+            <div class="card-body px-0 pb-2" style="height: 425px;">
+              <div class="table-responsive">
+                <table class="table align-items-center mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-uppercase  text-xxs font-weight-bolder " style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Lights</th>
+                      <th class="text-uppercase  text-xxs font-weight-bolder" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Location</th>
+                      <th class="text-uppercase  text-xxs font-weight-bolder" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Status</th>
+                      <th class="text-uppercase  text-xxs font-weight-bolder " style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Working Hours</th>
+                      <th class="text-center text-uppercase  text-xxs font-weight-bolder" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Warranty Due</th>
+                      <th class="text-center text-uppercase  text-xxs font-weight-bolder" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Model Prediction</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-iconL1" aria-hidden="true" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"></i>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">&nbsp; Lamp 1</h6>
+                          </div>
+                        </div>
+                      </td>
+
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> E-Block </span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold" style="color: rgb(234, 207, 74);font-family: Georgia, 'Times New Roman', Times, serif;" id="L1_Status">...</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> 8h:20m</span>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> <span style="color: red;">120</span>/<span>365</span>  Days</span>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: rgb(8, 218, 5);font-family: Georgia, 'Times New Roman', Times, serif;">Good</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-iconL2" aria-hidden="true" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"></i>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">&nbsp; Lamp 2</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> E-Block </span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold" style="color: rgb(234, 207, 74);font-family: Georgia, 'Times New Roman', Times, serif;" id="L2_Status">...</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> 8h:20m</span>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> <span style="color: red;">120</span>/<span>365</span>  Days</span>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: rgb(8, 218, 5);font-family: Georgia, 'Times New Roman', Times, serif;">Good</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-iconL3" aria-hidden="true" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"></i>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">&nbsp; Lamp 3</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> E-Block </span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold" style="color: rgb(234, 207, 74);font-family: Georgia, 'Times New Roman', Times, serif;" id="L3_Status">...</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> 8h:20m</span>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> <span style="color: red;">120</span>/<span>365</span>  Days</span>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: rgb(8, 218, 5);font-family: Georgia, 'Times New Roman', Times, serif;">Good</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-iconL4" aria-hidden="true" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"></i>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">&nbsp; Lamp 4</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> E-Block </span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold" style="color: rgb(234, 207, 74);font-family: Georgia, 'Times New Roman', Times, serif;" id="L4_Status">...</span>
+                      </td>
+                      <td class="align-middle" >
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> 8h:20m</span>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> <span style="color: red;">120</span>/<span>365</span>  Days</span>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: rgb(8, 218, 5);font-family: Georgia, 'Times New Roman', Times, serif;">Good</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="d-flex px-2 py-1">
+                          <div>
+                            <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-iconL5" aria-hidden="true" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"></i>
+                          </div>
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">&nbsp; Lamp 5</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> E-Block </span>
+                      </td>
+                      <td class="align-middle text-center text-sm">
+                        <span class="text-xs font-weight-bold" style="color: rgb(226, 74, 234);font-family: Georgia, 'Times New Roman', Times, serif;" id="L4_Status">...</span>
+                      </td>
+                      <td class="align-middle">
+                        <div class="progress-wrapper w-75 mx-auto">
+                          <div class="progress-info">
+                            <div class="progress-percentage">
+                              <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> 8h:20m</span>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;"> <span style="color: red;">120</span>/<span>365</span>  Days</span>
+                      </td>
+                      <td>
+                        <span class="text-xs font-weight-bold" style="color: rgb(8, 218, 5);font-family: Georgia, 'Times New Roman', Times, serif;">Good</span>
+                      </td>
+                    </tr>
+                    <br>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6"  style="height: 505px;">
+          <div class="card h-100 bg-gradient-dark">
+            <div class="card-header pb-0 bg-gradient-dark">
+              <h6 style="color: white;font-family: Georgia, 'Times New Roman', Times, serif;">Schedule</h6>
+              <p class="text-sm">
+                
+                
+                <div class="row">
+                  <div class="col col-lg-4">
+                      <span><span style="color: white;font-weight: 900;">From</span>&nbsp;<input type="time" id="fromTime"></span>
+                  </div>
+                  <div class="col col-lg-4">
+                      <span><span style="color: white;font-weight: 900;">To</span>&nbsp;<input type="time" id="toTime"></span>
+                  </div>
+                  <div class="col col-lg-4" style="padding-top: 25px;">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="flexCheckDay">
+                          <label class="form-check-label" for="flexCheckDay" style="color: white; font-weight: 900;" id="dayLabel">
+                              Today
+                          </label>
+                      </div>
+                  </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col">
+                </div>
+                <div class="col">
+                  <button onclick="uploadTimes()" type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="Schedule" style="height: 32px;">update</button>
+
+                </div>
+                <div class="col">
+                </div>
+               </div>
+              </p>
+            </div>
+          
+          
+          
+            <div class="card-body p-3">
+              <div class="row">                 
+                <div class="col" >
+                 <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md "  >
+                    <h5  style="color: white;">Hr</h5>
+                 </div>
+                </div>
+                <div class="col" >
+                 <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md "  >
+                   <h5  style="color: white;">M</h5>
+                </div>
+                </div>
+                <div class="col" >
+                 <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md "  >
+                   <h5  style="color: white;">S</h5>
+                </div>
+                </div>
+                <div class="col"> 
+                  <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md "  >
+                    <h5  id="Status" style="color: white;"></h5>
+                 </div>
+               </div>
+             </div>
+                <div class="row">
+                  
+                   <div class="col" >
+                    <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md "  >
+                       <h5 id="hour" style="color: white;"></h5>
+                    </div>
+                   </div>
+                   <div class="col" >
+                    <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md "  >
+                      <h5 id="minutes" style="color: white;"></h5>
+                   </div>
+                   </div>
+                   <div class="col" >
+                    <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md "  >
+                      <h5 id="seconds" style="color: white;"></h5>
+                   </div>
+                   </div>
+                   <div class="col">
+                    <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                    <i class="bi bi-lightbulb-fill text-lg opacity-10" id="lightbulb-icon21" aria-hidden="true" style="padding-top: 3px;"></i>
+                      
+                   </div>
+                  </div>
+                   
+
+                </div><br>
+                <div class="row">
+                  <div class="col">
+                   <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                    <h5 id="alert" style="color: white;"></h5>
+                  </div>
+                 </div>
+               </div><br>
+               <div class="row">
+                <div class="col">
+                 <div class="card-body p-1 bg-gradient-dark shadow text-center border-radius-md h-100"  >
+                  <h5 style="color: white;">ON TIME <span style="color: rgb(8, 218, 5)" id="lightStart">-</span> TO <span style="color: rgb(8, 218, 5)" id="lightOff">-</span></h5>
+                </div>
+               </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" >Mode</h5>
+          
+        </div>
+        <div class="modal-body" id="exampleModalLabel">
+          You are in Manual Mode....
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var exampleModal = document.getElementById('exampleModal');
+  
+    exampleModal.addEventListener('show.bs.modal', function (event) {
+      // Button that triggered the modal
+      var button = event.relatedTarget;
+  
+      // Extract info from data-bs-* attributes
+      var recipient = button.getAttribute('data-bs-whatever');
+  
+      // Update the modal's content.
+      var modalTitle = exampleModal.querySelector('.modal-title');
+      var modalBody = exampleModal.querySelector('.modal-body');
+  
+
+      if(recipient==='Schedule'){
+        modalTitle.textContent = 'Schedule';
+        modalBody.innerHTML = 'Schedule Updated.....';
+      }else{
+        modalTitle.textContent = 'Mode';
+      modalBody.innerHTML = 'You are in ' + recipient + ' mode....';
+
+      }    
+      // Automatically close the modal after 1 second
+      setTimeout(function () {
+        var modal = bootstrap.Modal.getInstance(exampleModal);
+        modal.hide();
+      }, 1500);
+    });
+  </script>
+
+   <script>
+    $(document).ready(function () {
+      $("#manualButton").click(function () {
+        updateDatabase(1, 0 , 0);
+      });
+  
+      $("#automaticButton").click(function () {
+        updateDatabase(0, 1 , 0);
+      });
+
+      $("#IntelligentButton").click(function () {
+        updateDatabase(0, 0 , 1);
+      });
+  
+      function updateDatabase(manualValue, automaticValue, IntelligentValue) {
+        $.ajax({
+          type: "POST",
+          url: "action_mode.php",
+          data: {manualValue: manualValue, automaticValue: automaticValue,IntelligentValue:IntelligentValue },
+          success: function (response) {
+            console.log(response);
+            // You can handle the response from the server if needed
+          },
+          error: function (error) {
+            console.error('Error updating database:', error);
+          }
+        });
+      }
+    });
+</script>
+  
+  <script>
+    $(document).ready(function () {
+        function updateSwitchStatus() {
+            // Make an Ajax request to get the manual value from the server
+            $.ajax({
+                type: "GET",
+                url: "manual_mode.php", // Replace with the actual path to your PHP file
+                dataType: "json",
+                success: function (data) {
+                    // Check the manual value and update the switch accordingly
+                    if (data == 1) {
+                        $("#flexSwitchCheckChecked1").prop("disabled", false);
+                        $("#flexSwitchCheckChecked2").prop("disabled", false);
+                        $("#flexSwitchCheckChecked3").prop("disabled", false);
+                        $("#flexSwitchCheckChecked4").prop("disabled", false);
+                        $("#flexSwitchCheckChecked5").prop("disabled", false);
+                      
+                        $("#customRange1").prop("disabled", false);
+                        $("#customRange2").prop("disabled", false);
+                        $("#customRange3").prop("disabled", false);
+                        $("#customRange4").prop("disabled", false);
+                        $("#customRange5").prop("disabled", false);
+                    } else {
+                        $("#flexSwitchCheckChecked1").prop("disabled", true);
+                        $("#flexSwitchCheckChecked2").prop("disabled", true);
+                        $("#flexSwitchCheckChecked3").prop("disabled", true);
+                        $("#flexSwitchCheckChecked4").prop("disabled", true);
+                        $("#flexSwitchCheckChecked5").prop("disabled", true);
+                      
+                        $("#customRange1").prop("disabled", true);
+                        $("#customRange2").prop("disabled", true);
+                        $("#customRange3").prop("disabled", true);
+                        $("#customRange4").prop("disabled", true);
+                        $("#customRange5").prop("disabled", true);
+                    }
+                },
+                complete: function () {
+                    // Schedule the next update after 1 second
+                    setTimeout(updateSwitchStatus, 1000);
+                }
+            });
+        }
+
+        // Initial call to set the switch status
+        updateSwitchStatus();
+    });
+</script>
+  
+<script>
+  $(document).ready(function () {
+    function updateText() {
+        $.ajax({
+            url: 'Readings.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function (response) {
+                // Update Voltage values
+                $('#Voltage1').text(response.Voltage.V1 + " V");
+
+                // Update Current values
+                $('#Current1').text(response.Current.C1);
+
+                // Update Power values
+                $('#Power1').text(response.Power.P1);
+
+                // Update Energy values
+                $('#Energy1').text(response.Energy.E1);
+
+                // Update Environmental Intensity value
+                $('#Environmental_intensity').text(response.LuxEnvironment);
+
+                // Update lamp Intensity value
+                $('#lamplux1').text(response.luxValue.lux1);
+
+            },
+            error: function (xhr, status, error) {
+                console.error(status + ": " + error);
+            }
+        });
+    }
+
+    // Call the updateText function every 1000 milliseconds (1 second)
+    setInterval(updateText, 1000);
+});
+
+</script>
+<script>
+  $(document).ready(function () {
+    function updateText() {
+        $.ajax({
+            url: 'Node1Readings.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function (response) {
+                // Update Voltage values
+                $('#Voltage2').text(response.Voltage.V2 + " V");
+
+                // Update Current values
+                $('#Current2').text(response.Current.C2);
+
+                // Update Power values
+                $('#Power2').text(response.Power.P2);
+
+                // Update Energy values
+                $('#Energy2').text(response.Energy.E2);
+
+                // Update lamp Intensity value
+                $('#lamplux2').text(response.LuxEnvironment);
+
+            },
+            error: function (xhr, status, error) {
+                console.error(status + ": " + error);
+            }
+        });
+    }
+    // Call the updateText function every 1000 milliseconds (1 second)
+    setInterval(updateText, 1000);
+});
+
+</script>
+   
+
+<script>
+  $(document).ready(function () {
+    // Initial check and update
+    updateManualIconColor();
+
+    // Periodically check and update every 1 second
+    setInterval(function () {
+      updateManualIconColor();
+    }, 1000);
+
+    function updateManualIconColor() {
+      $.ajax({
+        type: "GET",
+        url: "manual_mode.php",
+        success: function (response) {
+          // Update icon color based on the fetched value
+          var manualIcon = $("#manualIcon");
+          if (response == 1) {
+            manualIcon.css("color", "green");
+          } else {
+            manualIcon.css("color", "red");
+          }
+        },
+        error: function (error) {
+          console.error('Error fetching manual value:', error.responseText);
+        }
+      });
+    }
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    // Initial check and update
+    updateautomaticIconColor();
+
+    // Periodically check and update every 1 second
+    setInterval(function () {
+      updateautomaticIconColor();
+    }, 1000);
+
+    function updateautomaticIconColor() {
+      $.ajax({
+        type: "GET",
+        url: "automatic_mode.php",
+        success: function (response) {
+          // Update icon color based on the fetched value
+          var automaticIcon = $("#automaticIcon");
+          if (response == 1) {
+            automaticIcon.css("color", "green");
+          } else {
+            automaticIcon.css("color", "red");
+          }
+        },
+        error: function (error) {
+          console.error('Error fetching manual value:', error.responseText);
+        }
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function () {
+    // Initial check and update
+    updateintelligentColor();
+
+    // Periodically check and update every 1 second
+    setInterval(function () {
+      updateintelligentColor();
+    }, 1000);
+
+    function updateintelligentColor() {
+      $.ajax({
+        type: "GET",
+        url: "intelligent_mode.php",
+        success: function (response) {
+          // Update icon color based on the fetched value
+          var aicon = $("#aicon");
+          if (response == 1) {
+            aicon.css("color", "green");
+          } else {
+            aicon.css("color", "red");
+          }
+        },
+        error: function (error) {
+          console.error('Error fetching manual value:', error.responseText);
+        }
+      });
+    }
+  });
+</script>
+  
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the checkbox element
+        var checkbox = document.getElementById('flexSwitchCheckChecked1');
+        var lightBulbIcon1 = document.getElementById('lightbulb-icon1');
+        var lightBulbIcon11 = document.getElementById("lightbulb-icon11");        
+        var lightBulbIconL1 = document.getElementById("lightbulb-iconL1");
+
+
+
+        // Function to fetch Lamp1_switch value from the server
+        function fetchSwitchState() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'getSwitchState1.php', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Update the checkbox state based on the fetched value
+                    checkbox.checked = xhr.responseText.trim() === '1';
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            };
+
+            // Send the request to the server
+            xhr.send();
+        }
+
+        // Function to update the icon color based on the checkbox state
+        function updateIconColor() {
+            if (checkbox.checked) {
+                lightBulbIcon1.classList.add('text-warning');             
+                lightBulbIcon11.classList.add('text-warning');
+                lightBulbIconL1.classList.add('text-warning');                          
+            } else {
+                lightBulbIcon1.classList.remove('text-warning');             
+                lightBulbIcon11.classList.remove('text-warning');     
+                lightBulbIconL1.classList.remove('text-warning');
+
+            }
+        }
+
+        // Fetch Lamp1_switch value every 1 second
+        var intervalId = setInterval(fetchSwitchState, 1000);
+
+        // Listen for changes in the checkbox state
+        $('#flexSwitchCheckChecked1').on('change', function () {
+            clearInterval(intervalId); // Stop the automatic updates
+            var isChecked = $(this).prop('checked') ? 1 : 0;
+
+            // Send the state to the PHP script using AJAX
+            $.ajax({
+                type: 'POST',
+                url: 'lamp1_control.php', // Replace with the path to your PHP script
+                data: { state: isChecked },
+                success: function (response) {
+                    console.log(response); // You can handle the response from the PHP script here
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            });
+        });
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the checkbox element
+        var checkbox = document.getElementById('flexSwitchCheckChecked2');
+        var lightBulbIcon2 = document.getElementById('lightbulb-icon2');
+        var lightBulbIcon22 = document.getElementById("lightbulb-icon22");        
+        var lightBulbIconL2 = document.getElementById("lightbulb-iconL2");
+
+
+
+        // Function to fetch Lamp1_switch value from the server
+        function fetchSwitchState() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'getSwitchState2.php', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Update the checkbox state based on the fetched value
+                    checkbox.checked = xhr.responseText.trim() === '1';
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            };
+
+            // Send the request to the server
+            xhr.send();
+        }
+
+        // Function to update the icon color based on the checkbox state
+        function updateIconColor() {
+            if (checkbox.checked) {
+                lightBulbIcon2.classList.add('text-warning');             
+                lightBulbIcon22.classList.add('text-warning');
+                lightBulbIconL2.classList.add('text-warning');                          
+            } else {
+                lightBulbIcon2.classList.remove('text-warning');             
+                lightBulbIcon22.classList.remove('text-warning');     
+                lightBulbIconL2.classList.remove('text-warning');
+
+            }
+        }
+
+        // Fetch Lamp1_switch value every 1 second
+        var intervalId = setInterval(fetchSwitchState, 1000);
+
+        // Listen for changes in the checkbox state
+        $('#flexSwitchCheckChecked2').on('change', function () {
+            clearInterval(intervalId); // Stop the automatic updates
+            var isChecked = $(this).prop('checked') ? 1 : 0;
+
+            // Send the state to the PHP script using AJAX
+            $.ajax({
+                type: 'POST',
+                url: 'lamp2_control.php', // Replace with the path to your PHP script
+                data: { state: isChecked },
+                success: function (response) {
+                    console.log(response); // You can handle the response from the PHP script here
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            });
+        });
+    });
+</script>
+
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the checkbox element
+        var checkbox = document.getElementById('flexSwitchCheckChecked3');
+        var lightBulbIcon3 = document.getElementById('lightbulb-icon3');
+        var lightBulbIcon33 = document.getElementById("lightbulb-icon33");        
+        var lightBulbIconL3 = document.getElementById("lightbulb-iconL3");
+
+
+
+        // Function to fetch Lamp1_switch value from the server
+        function fetchSwitchState() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'getSwitchState3.php', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Update the checkbox state based on the fetched value
+                    checkbox.checked = xhr.responseText.trim() === '1';
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            };
+
+            // Send the request to the server
+            xhr.send();
+        }
+
+        // Function to update the icon color based on the checkbox state
+        function updateIconColor() {
+            if (checkbox.checked) {
+                lightBulbIcon3.classList.add('text-warning');             
+                lightBulbIcon33.classList.add('text-warning');
+                lightBulbIconL3.classList.add('text-warning');                          
+            } else {
+                lightBulbIcon3.classList.remove('text-warning');             
+                lightBulbIcon33.classList.remove('text-warning');     
+                lightBulbIconL3.classList.remove('text-warning');
+
+            }
+        }
+
+        // Fetch Lamp1_switch value every 1 second
+        var intervalId = setInterval(fetchSwitchState, 1000);
+
+        // Listen for changes in the checkbox state
+        $('#flexSwitchCheckChecked3').on('change', function () {
+            clearInterval(intervalId); // Stop the automatic updates
+            var isChecked = $(this).prop('checked') ? 1 : 0;
+
+            // Send the state to the PHP script using AJAX
+            $.ajax({
+                type: 'POST',
+                url: 'lamp3_control.php', // Replace with the path to your PHP script
+                data: { state: isChecked },
+                success: function (response) {
+                    console.log(response); // You can handle the response from the PHP script here
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            });
+        });
+    });
+</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Get the checkbox element
+        var checkbox = document.getElementById('flexSwitchCheckChecked4');
+        var lightBulbIcon4 = document.getElementById('lightbulb-icon4');
+        var lightBulbIcon44 = document.getElementById("lightbulb-icon44");        
+        var lightBulbIconL4 = document.getElementById("lightbulb-iconL4");
+
+
+
+        // Function to fetch Lamp1_switch value from the server
+        function fetchSwitchState() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'getSwitchState4.php', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    // Update the checkbox state based on the fetched value
+                    checkbox.checked = xhr.responseText.trim() === '1';
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            };
+
+            // Send the request to the server
+            xhr.send();
+        }
+
+        // Function to update the icon color based on the checkbox state
+        function updateIconColor() {
+            if (checkbox.checked) {
+                lightBulbIcon4.classList.add('text-warning');             
+                lightBulbIcon44.classList.add('text-warning');
+                lightBulbIconL4.classList.add('text-warning');                          
+            } else {
+                lightBulbIcon4.classList.remove('text-warning');             
+                lightBulbIcon44.classList.remove('text-warning');     
+                lightBulbIconL4.classList.remove('text-warning');
+
+            }
+        }
+
+        // Fetch Lamp1_switch value every 1 second
+        var intervalId = setInterval(fetchSwitchState, 1000);
+
+        // Listen for changes in the checkbox state
+        $('#flexSwitchCheckChecked4').on('change', function () {
+            clearInterval(intervalId); // Stop the automatic updates
+            var isChecked = $(this).prop('checked') ? 1 : 0;
+
+            // Send the state to the PHP script using AJAX
+            $.ajax({
+                type: 'POST',
+                url: 'lamp4_control.php', // Replace with the path to your PHP script
+                data: { state: isChecked },
+                success: function (response) {
+                    console.log(response); // You can handle the response from the PHP script here
+
+                    // Update the icon color based on the checkbox state
+                    updateIconColor();
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var customRange1 = document.getElementById('customRange1');
+      var intervalId = setInterval(updateCustomRange1, 1000);
+      var userInteracted = false;
+
+      function updateCustomRange1() {
+          $.ajax({
+              url: 'fetch_intensity1.php',
+              type: 'GET',
+              success: function (data) {
+                  if (!userInteracted) { // Only update if the user hasn't interacted
+                      customRange1.value = data;
+                  }
+              }
+          });
+      }
+
+      $('#customRange1').on('input', function () {
+          userInteracted = true;
+          var rangeValue = $(this).val();
+
+          $.ajax({
+              type: 'POST',
+              url: 'update_range1.php',
+              data: { value: rangeValue },
+              success: function (response) {
+                  console.log(response);
+              }
+          });
+      });
+  });
+</script>
+ 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var customRange2 = document.getElementById('customRange2');
+      var intervalId = setInterval(updateCustomRange2, 1000);
+      var userInteracted = false;
+
+      function updateCustomRange2() {
+          $.ajax({
+              url: 'fetch_intensity2.php',
+              type: 'GET',
+              success: function (data) {
+                  if (!userInteracted) { // Only update if the user hasn't interacted
+                      customRange2.value = data;
+                  }
+              }
+          });
+      }
+
+      $('#customRange2').on('input', function () {
+          userInteracted = true;
+          var rangeValue = $(this).val();
+
+          $.ajax({
+              type: 'POST',
+              url: 'update_range2.php',
+              data: { value: rangeValue },
+              success: function (response) {
+                  console.log(response);
+              }
+          });
+      });
+  });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var customRange3 = document.getElementById('customRange3');
+      var intervalId = setInterval(updateCustomRange3, 1000);
+      var userInteracted = false;
+
+      function updateCustomRange3() {
+          $.ajax({
+              url: 'fetch_intensity3.php',
+              type: 'GET',
+              success: function (data) {
+                  if (!userInteracted) { // Only update if the user hasn't interacted
+                      customRange3.value = data;
+                  }
+              }
+          });
+      }
+
+      $('#customRange3').on('input', function () {
+          userInteracted = true;
+          var rangeValue = $(this).val();
+
+          $.ajax({
+              type: 'POST',
+              url: 'update_range3.php',
+              data: { value: rangeValue },
+              success: function (response) {
+                  console.log(response);
+              }
+          });
+      });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      var customRange4 = document.getElementById('customRange4');
+      var intervalId = setInterval(updateCustomRange4, 1000);
+      var userInteracted = false;
+
+      function updateCustomRange4() {
+          $.ajax({
+              url: 'fetch_intensity4.php',
+              type: 'GET',
+              success: function (data) {
+                  if (!userInteracted) { // Only update if the user hasn't interacted
+                      customRange4.value = data;
+                  }
+              }
+          });
+      }
+
+      $('#customRange4').on('input', function () {
+          userInteracted = true;
+          var rangeValue = $(this).val();
+
+          $.ajax({
+              type: 'POST',
+              url: 'update_range4.php',
+              data: { value: rangeValue },
+              success: function (response) {
+                  console.log(response);
+              }
+          });
+      });
+  });
+</script>
+
+
+<script>
+    function updateCountdown() {
+        $.ajax({
+            url: 'GetSchedule.php', // Update this with the correct PHP file to fetch schedule data
+            type: 'GET',
+            dataType: 'json',
+            success: function(response) {
+                const currentTime = new Date();
+
+                // Convert schedule times to Date objects
+                const onTime = new Date(currentTime.toDateString() + ' ' + response.from_time);
+                const offTime = new Date(currentTime.toDateString() + ' ' + response.to_time);
+
+                 const options = {
+                      hour: 'numeric',
+                      minute: 'numeric',
+                      hour12: true
+                  };
+
+                  // Get the formatted time strings
+                  const formattedOnTime = onTime.toLocaleTimeString('en-US', options);
+                  const formattedOffTime = offTime.toLocaleTimeString('en-US', options);
+
+                  $('#lightStart').text(formattedOnTime);
+                  $('#lightOff').text(formattedOffTime);
+
+                const dayStatusAsNumber = parseInt(response.dayStatus, 10);
+               
+// Add dayStatusAsNumber to offTime
+                 offTime.setDate(offTime.getDate() + dayStatusAsNumber);
+                  // console.log(offTime);
+                // Check if the current time is within the schedule
+                let timeRemaining;
+                let alertMessage;
+
+                if (currentTime >= onTime && currentTime < offTime) {
+                    timeRemaining = new Date(offTime - currentTime);
+                    alertMessage = 'Time To <span style="color: red;">OFF</span>';
+                } else {
+                    timeRemaining = new Date(onTime - currentTime);
+                    alertMessage = 'Time To <span style="color: rgb(8, 218, 5);">ON</span>';
+                }
+
+                const hours = timeRemaining.getUTCHours();
+                const minutes = timeRemaining.getUTCMinutes();
+                const seconds = timeRemaining.getUTCSeconds();
+
+                // Display the countdown and alert message
+                document.getElementById('alert').innerHTML = alertMessage;
+                document.getElementById('hour').innerHTML = `${hours}`;
+                document.getElementById('minutes').innerHTML = `${minutes}`;
+                document.getElementById('seconds').innerHTML = `${seconds}`;
+            },
+            error: function(xhr, status, error) {
+                console.error(status + ": " + error);
+            }
+        });
+    }
+
+    // Initial call to update the countdown
+    updateCountdown();
+
+    // Update the countdown every second
+    setInterval(updateCountdown, 1000);
+</script>
+
+ 
+<script>
+ let previousState = "OFF"; // Initialize the previous state as OFF
+  
+function sendTelegramMessage(message) {
+    // Your bot token and chat ID
+    const botToken = "6105850338:AAGYG6hKQ31WktpYtKza86mxCSFeXZc4iY8";
+    const chatId = "-1001920945805";
+// Get the current date and time
+const currentTime = new Date();
+
+// Format the date with the month in text (e.g., "10/oct/2023")
+const dateOptions = { day: "numeric", month: "short", year: "numeric" };
+const formattedDate = currentTime.toLocaleDateString("en-US", dateOptions);
+
+// Format the time (e.g., "12:34:56 PM")
+const timeOptions = { hour: "2-digit", minute: "2-digit", second: "2-digit" };
+const formattedTime = currentTime.toLocaleTimeString("en-US", timeOptions);
+
+// Create the message text with the formatted date and time
+const messageText = `*${message} - ${formattedDate} ${formattedTime}*`;
+
+// Create the URL for the Telegram API
+const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+// Create a JSON payload with the message data
+const data = {
+  chat_id: chatId,
+  text: messageText,
+  parse_mode: "Markdown", // Specify that the message contains Markdown formatting
+}
+
+    // Send the message using the fetch API
+    fetch(apiUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        // Handle the response if needed
+        console.log(data);
+      })
+      .catch((error) => {
+        // Handle any errors
+        console.error(error);
+      });
+  }
+
+  
+  
+  function updateLED() {
+      $.ajax({
+          url: 'GetSchedule.php', // Replace with the correct path to your PHP file to fetch schedule data
+          type: 'GET',
+          dataType: 'json',
+          success: function (response) {
+              const currentTime = new Date();
+
+              // Convert schedule times to Date objects
+              const onTime = new Date(currentTime.toDateString() + ' ' + response.from_time);
+              const offTime = new Date(currentTime.toDateString() + ' ' + response.to_time);
+              const dayStatusAsNumber = parseInt(response.dayStatus, 10);
+
+// Add dayStatusAsNumber to offTime
+               offTime.setDate(offTime.getDate() + dayStatusAsNumber);
+              // console.log(offTime);
+              // Get the lightbulb icon element
+              const lightbulbIcon = document.getElementById('lightbulb-icon21');
+
+              // Check if the current time is within the specified on time and off time
+              if (currentTime >= onTime && currentTime < offTime) {
+                  // Turn the LED on (change the icon color to yellow)
+                  lightbulbIcon.style.color = 'yellow';
+                  document.getElementById('Status').innerHTML = `ON`;
+
+                  // Send the Telegram message only if the state changes from OFF to ON
+                  if (previousState === "OFF") {
+                      sendTelegramMessage("ON ALL LIGHT");
+                      setTimeout(turnOnSwitch1ON, 3000);
+                      setTimeout(turnOnSwitch2ON, 5000);
+                      setTimeout(turnOnSwitch3ON, 7000);
+                      setTimeout(turnOnSwitch4ON, 9000);
+                      previousState = "ON"; // Update the previous state
+                  }
+              } else {
+                  // Turn the LED off (change the icon color to white)
+                  lightbulbIcon.style.color = 'red';
+                  document.getElementById('Status').innerHTML = `OFF`;
+
+                  // Send the Telegram message only if the state changes from ON to OFF
+                  if (previousState === "ON") {
+                      sendTelegramMessage("OFF ALL LIGHT");
+                      setTimeout(turnOnSwitch1OFF, 3000);
+                      setTimeout(turnOnSwitch2OFF, 5000);
+                      setTimeout(turnOnSwitch3OFF, 7000);
+                      setTimeout(turnOnSwitch4OFF, 9000);
+                      previousState = "OFF"; // Update the previous state
+                  }
+              }
+          },
+          error: function (xhr, status, error) {
+              console.error(status + ": " + error);
+          }
+      });
+  }
+
+  // Initial call to update the LED state
+  updateLED();
+
+  // Update the LED state every minute
+  setInterval(updateLED, 100); // Every 60,000 milliseconds (1 minute)
+</script>
+<script>
+  function uploadTimes() {
+      var fromTime = $("#fromTime").val();
+      var toTime = $("#toTime").val();
+      var dayStatus = document.getElementById('flexCheckDay').checked ? 1 : 0;
+
+      $.ajax({
+          type: "POST",
+          url: "time.php",
+          data: {
+              fromTime: fromTime,
+              toTime: toTime,
+              dayStatus: dayStatus
+          },
+          success: function(response) {
+              // Handle success, if needed
+              console.log(response);
+          },
+          error: function(error) {
+              // Handle error, if needed
+              console.log(error);
+          }
+      });
+  }
+</script>
+
+<script>
+  $(document).ready(function() {
+    setInterval(function() {
+        $.ajax({
+            url: 'update_progress.php',
+            type: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                updateProgressBar('progressbar1', data.Lamp1_intensity);
+                updateProgressBar('progressbar2', data.Lamp2_intensity);
+                updateProgressBar('progressbar3', data.Lamp3_intensity);
+                updateProgressBar('progressbar4', data.Lamp4_intensity);
+            },
+            error: function(error) {
+                console.error('Error fetching data:', error);
+            }
+        });
+    }, 1000);
+
+    function updateProgressBar(barId, intensity) {
+        var progressBar = $('#' + barId);
+        var percentage = intensity * 25; // Assuming each intensity step represents 25%
+        progressBar.width(percentage + '%');
+        progressBar.text(percentage + '%');
+        progressBar.attr('aria-valuenow', percentage);
+    }
+});
+
+</script>
+
+<script>
+  document.getElementById('flexCheckDay').addEventListener('change', function () {
+      var label = document.getElementById('dayLabel');
+      label.innerText = this.checked ? 'All Day' : 'Today';
+  });
+</script>
+<script>
+  const toggleSwitchM = document.getElementById("flexSwitchCheckCheckedMaster");
+  const lightBulbIconM = document.getElementById("lightbulb-iconMaster");
+
+  toggleSwitchM.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIconM.classList.add("text-warning"); // Change color to yellow
+    } else {
+      lightBulbIconM.classList.remove("text-warning");
+    }
+  });
+</script> 
+<script>
+  let toggle = document.querySelector('.toggle')
+let menu = document.querySelector('.menu')
+
+toggle.onclick = ()=>{
+    menu.classList.toggle('active')
+}
+</script>
+
+<!-- ......................................LAMP 1......................................... -->
+<script>
+  function turnOnSwitch1ON() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked1");
+    if (switchElement) {
+      switchElement.checked = true;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  function turnOnSwitch1OFF() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked1");
+    if (switchElement) {
+      switchElement.checked = false;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  const toggleSwitch1 = document.getElementById("flexSwitchCheckChecked1");
+  const lightBulbIcon1ON = document.getElementById("lightbulb-icon1");
+  const lightBulbIcon1OFF = document.getElementById("lightbulb-icon1");
+
+  toggleSwitch1.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon1ON.classList.add("text-warning"); // Change color to yellow
+      sendTelegramMessage("Lamp 1 ON");
+    } else {
+      lightBulbIcon1OFF.classList.remove("text-warning");
+      sendTelegramMessage("Lamp 1 OFF");
+    }
+  });
+
+
+</script>
+
+
+<script>
+  const toggleSwitch11 = document.getElementById("flexSwitchCheckChecked1");
+  const lightBulbIcon11 = document.getElementById("lightbulb-icon11");
+
+  toggleSwitch11.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon11.classList.add("text-warning"); // Change color to yellow
+    } else {
+      lightBulbIcon11.classList.remove("text-warning");
+    }
+  });
+</script>
+<!-- ..............................................Lamp 2...................................... -->
+<script>
+  function turnOnSwitch2ON() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked2");
+    if (switchElement) {
+      switchElement.checked = true;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  function turnOnSwitch2OFF() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked2");
+    if (switchElement) {
+      switchElement.checked = false;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  const toggleSwitch2 = document.getElementById("flexSwitchCheckChecked2");
+  const lightBulbIcon2ON = document.getElementById("lightbulb-icon2");
+  const lightBulbIcon2OFF = document.getElementById("lightbulb-icon2");
+
+  toggleSwitch2.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon2ON.classList.add("text-warning"); // Change color to yellow
+      sendTelegramMessage("Lamp 2 ON");
+    } else {
+      lightBulbIcon2OFF.classList.remove("text-warning");
+      sendTelegramMessage("Lamp 2 OFF");
+    }
+  });
+</script>
+<!-- ............................................................................................................ -->
+<script>
+  const toggleSwitch22 = document.getElementById("flexSwitchCheckChecked2");
+  const lightBulbIcon22 = document.getElementById("lightbulb-icon22");
+
+  toggleSwitch22.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon22.classList.add("text-warning"); // Change color to yellow
+    } else {
+      lightBulbIcon22.classList.remove("text-warning");
+    }
+  });
+</script>
+<!--..........................................Lamp 3.......................................... -->
+<script>
+  function turnOnSwitch3ON() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked3");
+    if (switchElement) {
+      switchElement.checked = true;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  function turnOnSwitch3OFF() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked3");
+    if (switchElement) {
+      switchElement.checked = false;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  const toggleSwitch3 = document.getElementById("flexSwitchCheckChecked3");
+  const lightBulbIcon3ON = document.getElementById("lightbulb-icon3");
+  const lightBulbIcon3OFF = document.getElementById("lightbulb-icon3");
+
+  toggleSwitch3.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon3ON.classList.add("text-warning"); // Change color to yellow
+      sendTelegramMessage("Lamp 3 ON");
+    } else {
+      lightBulbIcon3OFF.classList.remove("text-warning");
+      sendTelegramMessage("Lamp 3 OFF");
+    }
+  });
+
+</script>
+<!-- ................................................................................... -->
+
+<script>
+  const toggleSwitch33 = document.getElementById("flexSwitchCheckChecked3");
+  const lightBulbIcon33 = document.getElementById("lightbulb-icon33");
+
+  toggleSwitch33.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon33.classList.add("text-warning"); // Change color to yellow
+    } else {
+      lightBulbIcon33.classList.remove("text-warning");
+    }
+  });
+</script>
+<!-- ..........................................Lamp 4.................................... -->
+<script>
+  function turnOnSwitch4ON() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked4");
+    if (switchElement) {
+      switchElement.checked = true;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  function turnOnSwitch4OFF() {
+    var switchElement = document.getElementById("flexSwitchCheckChecked4");
+    if (switchElement) {
+      switchElement.checked = false;
+
+      // Simulate a change event to trigger the functionality
+      var event = new Event("change");
+      switchElement.dispatchEvent(event);
+    }
+  }
+
+  const toggleSwitch4ON = document.getElementById("flexSwitchCheckChecked4");
+  const lightBulbIcon4ON = document.getElementById("lightbulb-icon4");
+  const lightBulbIcon4OFF = document.getElementById("lightbulb-icon4");
+
+  toggleSwitch4ON.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon4ON.classList.add("text-warning"); // Change color to yellow
+      sendTelegramMessage("Lamp 4 ON");
+    } else {
+      lightBulbIcon4OFF.classList.remove("text-warning");
+      sendTelegramMessage("Lamp 4 OFF");
+    }
+  });
+
+ 
+</script>
+
+<script>
+  const toggleSwitch44 = document.getElementById("flexSwitchCheckChecked4");
+  const lightBulbIcon44 = document.getElementById("lightbulb-icon44");
+
+  toggleSwitch44.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIcon44.classList.add("text-warning"); // Change color to yellow
+    } else {
+      lightBulbIcon44.classList.remove("text-warning");
+    }
+  });
+</script>
+<script>
+  const toggleSwitchL1 = document.getElementById("flexSwitchCheckChecked1");
+  const lightBulbIconL1 = document.getElementById("lightbulb-iconL1");
+
+  toggleSwitchL1.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIconL1.classList.add("text-warning"); // Change color to yellow
+      document.getElementById('L1_Status').innerHTML = `ON`;
+    } else {
+      lightBulbIconL1.classList.remove("text-warning");
+      document.getElementById('L1_Status').innerHTML = `<span style="color:red;">OFF</span>`;
+    }
+  });
+</script>
+<script>
+  const toggleSwitchL2 = document.getElementById("flexSwitchCheckChecked2");
+  const lightBulbIconL2 = document.getElementById("lightbulb-iconL2");
+
+  toggleSwitchL2.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIconL2.classList.add("text-warning"); // Change color to yellow
+      document.getElementById('L2_Status').innerHTML = `ON`;
+    } else {
+      lightBulbIconL2.classList.remove("text-warning");
+      document.getElementById('L2_Status').innerHTML = `<span style="color:red;">OFF</span>`;
+
+    }
+  });
+</script>
+<script>
+  const toggleSwitchL3 = document.getElementById("flexSwitchCheckChecked3");
+  const lightBulbIconL3 = document.getElementById("lightbulb-iconL3");
+
+  toggleSwitchL3.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIconL3.classList.add("text-warning"); // Change color to yellow
+      document.getElementById('L3_Status').innerHTML = `ON`;
+
+    } else {
+      lightBulbIconL3.classList.remove("text-warning");
+      document.getElementById('L3_Status').innerHTML = `<span style="color:red;">OFF</span>`;
+
+    }
+  });
+</script>
+
+<script>
+  const toggleSwitchL4 = document.getElementById("flexSwitchCheckChecked4");
+  const lightBulbIconL4 = document.getElementById("lightbulb-iconL4");
+
+  toggleSwitchL4.addEventListener("change", function() {
+    if (this.checked) {
+      lightBulbIconL4.classList.add("text-warning"); // Change color to yellow
+      document.getElementById('L4_Status').innerHTML = `ON`;
+    } else {
+      lightBulbIconL4.classList.remove("text-warning");
+      document.getElementById('L4_Status').innerHTML = `<span style="color:red;">OFF</span>`;
+
+    }
+  });
+</script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+<!-- Add this script inside the HTML file containing your chart -->
+<script>
+    // Bar Chart Configuration
+    var ctx = document.getElementById("chart-bars").getContext("2d");
+    var chartBars = new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: [],
+            datasets: [{
+                label: "LuxEnvironment",
+                tension: 0.4,
+                borderWidth: 0,
+                borderRadius: 4,
+                borderSkipped: false,
+                backgroundColor: "rgb(24,193,232)", // Sky Blue Background Color
+                data: [],
+                maxBarThickness: 6
+            },
+            {
+                label: "LuxLamp1",
+                tension: 0.4, 
+                borderWidth: 0,
+                borderRadius: 4,
+                borderSkipped: false,
+                backgroundColor: "rgb(152, 9, 160)", // Yellow Background Color for LuxLamp1
+                data: [],
+                maxBarThickness: 6
+            },
+            {
+                label: "LuxLamp2",
+                tension: 0.4,
+                borderWidth: 0,
+                borderRadius: 4,
+                borderSkipped: false,
+                backgroundColor: "rgb(9, 82, 160)", // Orange Background Color for LuxLamp2
+                data: [],
+                maxBarThickness: 6
+            },
+            {
+                label: "LuxLamp3",
+                tension: 0.4,
+                borderWidth: 0,
+                borderRadius: 4,
+                borderSkipped: false,
+                backgroundColor: "rgb(167, 2, 2)", // Orange Background Color for LuxLamp2
+                data: [],
+                maxBarThickness: 6
+            }
+          ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                    },
+                    ticks: {
+                        display: true,
+                        color: "#fff", // White color
+                        padding: 15,
+                        font: {
+                            size: 14,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    },
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false
+                    },
+                    ticks: {
+                        display: true,
+                        color: "#fff", // White color
+                    },
+                },
+            },
+        },
+    });
+
+    // Line Chart Configuration
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
+    var chartLine = new Chart(ctx2, {
+        type: "line",
+        data: {
+            labels: [],
+            datasets: [
+                {
+                    label: "Current1",
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 0,
+                    borderColor: "rgb(152, 9, 160)",
+                    backgroundColor: 'rgba(72,72,176,0)',
+                    fill: true,
+                    data: [],
+                    maxBarThickness: 6
+                },
+                {
+                    label: "Power1",
+                    tension: 0.4,
+                    borderWidth: 3,
+                    pointRadius: 0,
+                    borderColor: "#48BFCA",
+                    backgroundColor: 'rgba(72,72,176,0)',
+                    fill: true,
+                    data: [],
+                    maxBarThickness: 6
+                },
+            ],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        padding: 10,
+                        color: '#b2b9bf',
+                        font: {
+                            size: 11,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        color: '#b2b9bf',
+                        padding: 20,
+                        font: {
+                            size: 11,
+                            family: "Open Sans",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+            },
+        },
+    });
+
+    function fetchDataAndUpdateChartBars() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'LuxEnvironment.php', true);
+
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                var data = JSON.parse(xhr.responseText);
+
+                // Update the bar chart data and labels
+                chartBars.data.labels = data.labels;
+                chartBars.data.datasets[0].data = data.datasets[0].data;
+                chartBars.data.datasets[1].data = data.datasets[1].data; // LuxLamp1
+                chartBars.data.datasets[2].data = data.datasets[2].data; // LuxLamp2
+                chartBars.data.datasets[3].data = data.datasets[3].data; // LuxLamp2
+
+                // Update the bar chart
+                chartBars.update();
+            }
+        };
+
+        xhr.send();
+    }
+
+    function fetchDataAndUpdateChartLine() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'LineChart.php', true);
+
+        xhr.onload = function () {
+            if (xhr.status >= 200 && xhr.status < 300) {
+                var data = JSON.parse(xhr.responseText);
+
+                // Update the line chart data
+                chartLine.data.labels = data.labels;
+                chartLine.data.datasets[0].data = data.datasets[0].data; // Current1
+                chartLine.data.datasets[1].data = data.datasets[1].data; // Power1
+
+                // Update the line chart
+                chartLine.update();
+            }
+        };
+
+        xhr.send();
+    }
+
+    // Fetch data and update charts every 1 second
+    setInterval(fetchDataAndUpdateChartBars, 1000);
+    setInterval(fetchDataAndUpdateChartLine, 1000);
+</script>
+
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+  
+</body>
+
+</html>
